@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emha Yoghurt - Blog & Menu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#8B008B] text-white">
+
+    <nav class="fixed top-0 w-full bg-[#6A006A] bg-opacity-90 z-50 shadow-lg">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold">Emha Yoghurt</a>
+            <div class="space-x-4">
+                <a href="#home" class="hover:text-gray-300">Home</a>
+                <a href="#about" class="hover:text-gray-300">About</a>
+                <a href="#menu" class="hover:text-gray-300">Produk</a>
+                <a href="#contact" class="hover:text-gray-300">Hubungi Kami</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center p-8 pt-24">
+        <h1 class="text-5xl md:text-7xl font-bold mb-4">
+            Halo, <span id="nama-pengguna"></span><br>
+            Selamat Datang di Emha Yoghurt
+        </h1>
+        <p class="text-xl md:text-2xl max-w-2xl mx-auto">
+            Temukan kesegaran alami dan kebaikan probiotik di setiap sajian kami.
+        </p>
+    </section>
+    <section class="min-h-screen flex flex-col justify-center items-center text-center p-8 pt-24">
+        <img src="images/Logo Apron.jpg" alt="">
+    </section>
+
+    <section id="about" class="min-h-screen flex flex-col justify-center items-center p-8">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8">Tentang Kami</h2>
+        <p class="max-w-4xl text-lg text-center leading-relaxed">
+            Emha Yoghurt didirikan dengan semangat untuk menyajikan produk yoghurt terbaik yang kaya akan manfaat. Kami percaya bahwa kebaikan dimulai dari dalam, dan yoghurt kami dibuat dari bahan-bahan pilihan terbaik tanpa pengawet.
+            Setiap botol dan cup Emha Yoghurt adalah wujud dari komitmen kami terhadap kualitas dan kesehatan.
+        </p>
+    </section>
+
+    <section id="menu" class="min-h-screen flex flex-col justify-center items-center p-8">
+        <h2 class="text-4xl md:text-5xl font-bold mb-12">Pilihan Produk Kami</h2>
+        
+        <div class="relative w-full max-w-4xl mx-auto overflow-hidden">
+            <img id="produk-gambar" src="" alt="Gambar Produk" class="w-full object-cover rounded-xl shadow-lg mb-8 transition-opacity duration-500 ease-in-out">
+            <div class="text-center">
+                <h3 id="produk-nama" class="text-3xl font-bold mb-2"></h3>
+                <p id="produk-deskripsi" class="text-lg mb-4 max-w-2xl mx-auto"></p>
+                <p id="produk-harga" class="text-2xl font-semibold"></p>
+            </div>
+
+            <button id="prev-btn" class="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg opacity-70 hover:opacity-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button id="next-btn" class="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white text-black p-2 rounded-full shadow-lg opacity-70 hover:opacity-100">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
+        </div>
+    </section>
+
+    <section id="social-media" class="text-center py-20 px-8">
+    
+    <h2 class="text-4xl md:text-5xl font-bold mb-8">
+        Follow us on Social Media
+    </h2>
+    
+    <div class="flex justify-center items-center space-x-6 md:space-x-10">
+        
+        <a href="https://www.instagram.com/emha_yoghurt/" target="_blank" rel="noopener noreferrer" class="text-lg font-medium hover:text-gray-300 transition-colors">
+            <span class="text-2xl">📸</span> Instagram
+        </a>
+        
+        <a href="https://www.tiktok.com/@retha_bs" target="_blank" rel="noopener noreferrer" class="text-lg font-medium hover:text-gray-300 transition-colors">
+            <span class="text-2xl">🎵</span> TikTok
+        </a>
+        
+        <a href="https://wa.me/6281228204771" target="_blank" rel="noopener noreferrer" class="text-lg font-medium hover:text-gray-300 transition-colors">
+            <span class="text-2xl">💬</span> WhatsApp
+        </a>
+        
+    </div>
+</section>
+
+    <section id="contact" class="min-h-screen flex flex-col justify-center items-center p-8">
+        <h2 class="text-4xl md:text-5xl font-bold mb-8">Hubungi Kami</h2>
+        <div class="w-full max-w-lg">
+            <form action="#" method="POST" class="space-y-4">
+                <div>
+                    <label for="name" class="block text-sm font-medium mb-1">Nama</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Nama Anda">
+                </div>
+                <div>
+                    <label for="email" class="block text-sm font-medium mb-1">Email</label>
+                    <input type="email" id="email" name="email" class="w-full p-2 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="email@contoh.com">
+                </div>
+                <div>
+                    <label for="message" class="block text-sm font-medium mb-1">Pesan</label>
+                    <textarea id="message" name="message" rows="4" class="w-full p-2 rounded-lg text-black focus:outline-none focus:ring-2 focus:ring-purple-500" placeholder="Pesan Anda"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-white text-[#8B008B] font-bold py-3 rounded-lg hover:bg-gray-200 transition-colors">Kirim Pesan</button>
+            </form>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
